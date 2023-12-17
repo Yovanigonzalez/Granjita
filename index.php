@@ -136,9 +136,7 @@
   text-align: left;
   margin-left: 20px; /* Puedes ajustar este valor según sea necesario para darle espacio desde el borde izquierdo */
 }
-  </style>
 
-<style>
     /* Otros estilos existentes */
 
     .section-container {
@@ -207,6 +205,100 @@
     }
 
 
+    #special-section {
+      background: #F89A0C;
+      color: #FFF;
+      padding: 1px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    #special-section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px; /* Adjust spacing between heading and sections */
+    }
+
+    .section-container {
+      display: flex;
+      /*justify-content: center; /* Center the sections horizontally */
+      align-items: center;
+      flex-wrap: wrap; /* Allow the sections to wrap on smaller screens */
+    }
+
+    .section-left,
+    .section-right {
+      flex: 1;
+      text-align: left;
+      max-width: 400px;
+      margin: 0 20px; /* Add margin for spacing between sections */
+    }
+
+    .section-image {
+      display: block; /* Ensure the image is a block-level element */
+      margin: 0 auto; /* Center the image horizontally */
+      max-width: 25%; /* Ensure the image doesn't exceed the container width */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 20px; /* Adjust spacing between text and image */
+    }
+  </style>
+
+  <style>
+    /* Estilos para la nueva sección "Únete a Nuestra Red de Distribución" */
+#join-distribution-right {
+  flex: 1;
+  text-align: right;
+  max-width: 459px; /* Puedes ajustar el ancho máximo según tus necesidades */
+  margin: 0 20px; /* Agrega margen para el espacio entre secciones */
+}
+
+#join-distribution-right h2 {
+  color: #000; /* Cambia el color del título según tus preferencias */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px; /* Ajusta el tamaño del título */
+  font-weight: bold;
+  margin-bottom: 10px; /* Ajusta el espacio entre el título y el párrafo */
+}
+
+#join-distribution-right p {
+  color: #000; /* Cambia el color del párrafo según tus preferencias */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px; /* Ajusta el tamaño del párrafo */
+  font-weight: 500;
+  line-height: normal;
+}
+  </style>
+
+<!-- Estilos de Movil-->
+
+  <style>
+            @media only screen and (max-width: 600px) {
+            /* Estilos para pantallas más pequeñas (ej. teléfonos) */
+
+            .contenedor {
+                flex-direction: column;
+            }
+
+            .imagen {
+                max-width: 100%; /* Hace que la imagen sea 100% del ancho del contenedor */
+            }
+
+            .texto {
+                margin-top: 20px; /* Agrega espacio entre la imagen y el texto en pantallas pequeñas */
+            }
+
+            .carousel-container {
+                flex-direction: column;
+            }
+
+            .carousel-item {
+                width: 100%;
+            }
+
+            .carousel-item img {
+                max-width: 100%;
+            }
+          }
   </style>
 </head>
 <body>
@@ -274,6 +366,34 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Nueva sección con fondo de color -->
+<div id="special-section">
+  <h2>¿Por qué elegirnos como tu proveedor de confianza?</h2>
+  <div class="section-container">
+    <div class="section-left">
+      <p>Entregas Rápidas y Confiables: 
+        Nuestra red de distribución eficiente garantiza que recibas tus productos frescos de La Granjita en tiempo récord.</p>
+        <img src="store/logistica.png" alt="Left Image" class="section-image">
+    </div>
+    <div class="section-right">
+      <p>Atención al Cliente de Primera: 
+        Nos enorgullece ofrecer un servicio al cliente excepcional. Estamos siempre disponibles para resolver tus consultas y asegurarnos de que obtengas lo que necesitas.
+      </p>
+      <img src="store/atencion.png" alt="Right Image" class="section-image">
+    </div>
+  </div>
+</div>
+
+<!-- Nueva sección "Únete a Nuestra Red de Distribución" -->
+<div id="join-distribution" class="section-container">
+  <div id="join-distribution-left"> <!-- Cambiado a "join-distribution-left" -->
+  </div>
+  <div id="join-distribution-right"> <!-- Cambiado a "join-distribution-right" -->
+    <h2 class="text-section-title">Únete a Nuestra Red de Distribución</h2>
+  </div>
+</div>
 
 </body>
 </html>
