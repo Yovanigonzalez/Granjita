@@ -1,0 +1,161 @@
+body {
+    text-align: center;
+    margin: 0;
+  }
+
+  svg {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    margin-top: -78px;
+  }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .imagen {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .texto {
+    max-width: 500px;
+    margin-left: 20px;
+  }
+
+  h1 {
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  h4 {
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #F89A0C;
+    border: 10px solid #F89A0C;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+  }
+
+
+  /* carrucel */
+
+  .banner-carrusel {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.texto-banner {
+width: 50%; /* Ajusta el ancho del texto según sea necesario */
+box-sizing: border-box;
+padding: 20px;
+color: #FFF;
+}
+
+.texto-banner h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.texto-banner p {
+font-size: 16px;
+}
+
+.imagen-banner img {
+width: 50%; /* Ajusta el ancho de la imagen según sea necesario */
+}
+
+
+  
+  @media (max-width: 600px) {
+    .contenedor {
+      flex-direction: column;
+    }
+
+    .imagen,
+    .texto {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    svg {
+  margin-top: -3px; /* Updated margin-top for smaller screens */
+}
+  }
+
+
+  .banner {
+    position: relative;
+    width: 100%;
+    background-color: #F89A0C;
+    color: #FFF;
+    text-align: center;
+    margin-top: -4px;
+
+  }
+
+  .banner-carrusel {
+    overflow: hidden;
+  }
+
+  .banner-item {
+    text-align: center;
+  }
+
+  .banner-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .texto-banner {
+    padding: 20px;
+  }
+
+  .texto-banner h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .texto-banner p {
+    font-size: 16px;
+  }
+
+  .svg-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .svg-circle {
+    width: 29px;
+    height: 29px;
+    fill: #FBFBFB;
+  }

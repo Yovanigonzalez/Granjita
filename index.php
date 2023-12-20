@@ -58,12 +58,12 @@
     }
 
 
-    svg {
+    /*svg {
       width: 100%;
       height: auto;
       margin: 0;
       margin-top: -87px;
-    }
+    }*/
 
     .carousel-container {
       display: flex;
@@ -269,79 +269,11 @@
 }
   </style>
 
-<!-- Estilos de Movil-->
 
-  <style>
-            @media only screen and (max-width: 600px) {
-            /* Estilos para pantallas más pequeñas (ej. teléfonos) */
-
-            .contenedor {
-                flex-direction: column;
-            }
-
-            .imagen {
-                max-width: 100%; /* Hace que la imagen sea 100% del ancho del contenedor */
-            }
-
-            .texto {
-                margin-top: 20px; /* Agrega espacio entre la imagen y el texto en pantallas pequeñas */
-            }
-
-            .carousel-container {
-                flex-direction: column;
-            }
-
-            .carousel-item {
-                width: 100%;
-            }
-
-            .carousel-item img {
-                max-width: 100%;
-            }
-          }
-  </style>
 </head>
 <body>
 
-  <div class="contenedor">
-    <img class="imagen" src="log/ico.png" alt="Logo de Distribuidora">
-    <div class="texto">
-      <h1>ABASTECEDORA<br> LA 'GRANJITA' </h1>
-      <h4>La Granjita es una abastecedora de pollo comprometida con brindar productos avícolas frescos y de primera calidad. Ubicados en el corazón de Tehuacán, Puebla, nos esforzamos por ofrecer a nuestros clientes opciones saludables y deliciosas de pollo y productos avícolas.</h4>
-      <button>Conocer más</button>
-    </div>
-  </div>
-
-  <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L75 9.28571C150 18.5714 300 37.1429 450 37.1429C600 37.1429 750 18.5714 825 9.28571L900 0V542H825C750 542 600 542 450 542C300 542 150 542 75 542H0V0Z" fill="#F89A0C"/>
-
-<!-- Carrusel -->
-<foreignObject x="50" y="50" width="800" height="442">
-  <div xmlns="http://www.w3.org/1999/xhtml" class="carousel-container">
-
-    <div class="carousel-item">
-      <!-- Círculo blanco con imagen -->
-      <div class="circle">
-        <img src="img/pierna.png" alt="Imagen 1" class="centered-image">
-      </div>
-    </div>
-    
-    <div class="carousel-item">
-      <div class="carousel-item-content">
-        <label class="product-title">Pierna</label><br><br>
-        <h4 class="product-description">Nuestras piernas de pollo se seleccionan cuidadosamente para garantizar la máxima calidad. Criadas de manera responsable, sin hormonas ni antibióticos, ofrecemos un producto natural y nutritivo para tu mesa.</h4>
-      </div>
-    </div>
-
-  </div>
-</foreignObject>
-
-
-<!-- Texto "Productos" -->
-<text x="80%" y="40" font-size="20" fill="white"   font-weight="bold"
- font-family="'Montserrat', sans-serif">Productos</text>
-
-  </svg>
+<?php include 'banner.php'; ?>
 
   <br><br>
   <!-- Después del bloque SVG -->
@@ -373,12 +305,12 @@
   <h2>¿Por qué elegirnos como tu proveedor de confianza?</h2>
   <div class="section-container">
     <div class="section-left">
-      <p>Entregas Rápidas y Confiables: 
+      <p align="justify">Entregas Rápidas y Confiables: 
         Nuestra red de distribución eficiente garantiza que recibas tus productos frescos de La Granjita en tiempo récord.</p>
         <img src="store/logistica.png" alt="Left Image" class="section-image">
     </div>
     <div class="section-right">
-      <p>Atención al Cliente de Primera: 
+      <p align="justify">Atención al Cliente de Primera: 
         Nos enorgullece ofrecer un servicio al cliente excepcional. Estamos siempre disponibles para resolver tus consultas y asegurarnos de que obtengas lo que necesitas.
       </p>
       <img src="store/atencion.png" alt="Right Image" class="section-image">
@@ -395,8 +327,13 @@
   </div>
 </div>
 
+<?php include 'section.php'; ?>
+
+<?php include 'footer.php'; ?>
+
 </body>
 </html>
+
 
 
 
