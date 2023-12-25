@@ -329,6 +329,8 @@
 
 <?php include 'section.php'; ?>
 
+<?php include 'nosotros.php'; ?>
+
 <?php include 'footer.php'; ?>
 
 </body>

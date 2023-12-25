@@ -11,13 +11,14 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="log/log.png" alt="Logo de Distribuidora">
+    <img class="logo" src="years/1993.png" alt="Logo de Distribuidora">
     
     <nav>
       <a href="index.php">Inicio</a>
       <a href="contacto.php">Contacto</a>
       <a href="acerca.php">Acerca de</a>
       <a href="tienda.php">Tienda</a>
+      <a href="login.php">Login</a>
     </nav>
 
     <!-- Icono de hamburguesa -->
