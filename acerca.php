@@ -11,7 +11,7 @@
         /* Estilos para la imagen principal */
         .main-image {
             width: 100%;
-            height: 550px;
+            height: 620px;
             display: block;
         }
 

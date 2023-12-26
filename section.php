@@ -54,8 +54,14 @@
     </ul>
   </div>
   <div class="right-half">
-    <button class="button">Unirse</button>
-  </div>
+  <button class="button" onclick="irAContacto()">Unirse</button>
+
+<script>
+    function irAContacto() {
+        window.location.href = 'contacto.php';
+    }
+</script>
+</div>
 </section>
 
 </body>

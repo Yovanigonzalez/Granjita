@@ -329,7 +329,11 @@
 
 <?php include 'section.php'; ?>
 
+<?php include 'videos.php'; ?>
+
 <?php include 'nosotros.php'; ?>
+
+<?php include 'pagos.php'; ?>
 
 <?php include 'footer.php'; ?>
 
