@@ -9,35 +9,37 @@
   <link rel="stylesheet" href="css/banner.css">
 
   <style>
+  /* Existing styles for the banner */
   .banner {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #F89A0C;
     position: relative;
-    flex-direction: column; /* Cambiamos la dirección de flex a columna para apilar elementos en pantallas pequeñas */
-    text-align: center; /* Centramos el texto en pantallas pequeñas */
+    flex-direction: column;
+    text-align: center;
+    height: 300px; /* Set a fixed height for the banner container */
   }
 
   .banner img {
-    max-width: 25%;
-    height: auto;
-    margin-bottom: 20px; /* Agregamos un margen inferior para separar la imagen del texto en pantallas pequeñas */
+    max-width: 100%; /* Make sure the image doesn't exceed the container width */
+    height: 100%; /* Set the image height to fill the container */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
   }
 
   .banner-text {
-    max-width: 80%; /* Reducimos el ancho máximo del texto en pantallas pequeñas */
+    max-width: 80%;
   }
 
   @media (min-width: 768px) {
-    /* Aplicamos estilos específicos para pantallas más grandes (ej. tablets) */
+    /* Additional styles for larger screens if needed */
     .banner {
-      flex-direction: row; /* Volvemos a la dirección de flex a fila para pantallas más grandes */
-      text-align: left; /* Alineamos el texto a la izquierda en pantallas más grandes */
+      flex-direction: row;
+      text-align: left;
     }
 
     .banner img {
-      margin-bottom: 0; /* Eliminamos el margen inferior para pantallas más grandes */
+      margin-bottom: 0;
     }
   }
 </style>
@@ -51,6 +53,8 @@
     <img class="imagen" src="log/ico.png" alt="Logo de Distribuidora">
     <div class="texto">
       <h1>ABASTECEDORA<br> LA 'GRANJITA' </h1>
+      <br>
+    
       <h4>La Granjita es una abastecedora de pollo comprometida con brindar productos avícolas frescos y de primera calidad. Ubicados en el corazón de Tehuacán, Puebla, nos esforzamos por ofrecer a nuestros clientes opciones saludables y deliciosas de pollo y productos avícolas.</h4>
       <button>Conocer más</button>
     </div>

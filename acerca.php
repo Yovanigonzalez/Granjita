@@ -1,5 +1,6 @@
 <?php include 'nav/menu.php'; ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,10 +152,40 @@
     <!-- Nueva sección de Misión y Visión -->
     <div class="mission-vision-section">
         <!-- Misión -->
-        <div class="mission-content">
-            <h2>Misión</h2>
-            <p>En La Granjita, nuestra misión es simple pero poderosa: brindar opciones saludables y deliciosas de pollo y productos avícolas a nuestros clientes. Nos esforzamos por ser la elección preferida, asegurando la frescura desde nuestra granja hasta tu mesa.</p>
-        </div>
+    <div class="mission-content">
+        <h2>Misión</h2>
+        <?php
+
+include 'config/config.php';
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Recuperar todas las misiones de la tabla 'misiones'
+$sql = "SELECT id, descripcion FROM misiones";
+$result = $conn->query($sql);
+
+// Verificar si la consulta fue exitosa
+if ($result->num_rows > 0) {
+    // Imprimir el contenido de las misiones
+    while ($row = $result->fetch_assoc()) {
+        $missionDescription = $row["descripcion"];
+        
+        // Aquí puedes utilizar $missionId y $missionDescription según tus necesidades
+        // Por ejemplo, imprimirlos en algún lugar de tu HTML
+        echo "<p>$missionDescription</p>";
+    }
+} else {
+    echo "No se encontraron misiones.";
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
+?>
+
+    </div>
 
         <!-- Línea divisoria vertical -->
         <div class="divider"></div>
@@ -162,7 +193,37 @@
         <!-- Visión -->
         <div class="vision-content">
             <h2>Visión</h2>
-            <p>Convertirnos en una empresa líder dentro de la cadena de suministros y llegar a ser la principal opción para el cliente, ofreciendo productos de la más alta calidad.</p>
+            <?php
+
+include 'config/config.php';
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Recuperar todas las misiones de la tabla 'misiones'
+$sql = "SELECT id, descripcion FROM visiones";
+$result = $conn->query($sql);
+
+// Verificar si la consulta fue exitosa
+if ($result->num_rows > 0) {
+    // Imprimir el contenido de las misiones
+    while ($row = $result->fetch_assoc()) {
+        $missionDescription = $row["descripcion"];
+        
+        // Aquí puedes utilizar $missionId y $missionDescription según tus necesidades
+        // Por ejemplo, imprimirlos en algún lugar de tu HTML
+        echo "<p>$missionDescription</p>";
+    }
+} else {
+    echo "No se encontraron misiones.";
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
+?>
+
         </div>
     </div>
 
@@ -185,5 +246,6 @@
 
 </body>
 </html>
+
 
 

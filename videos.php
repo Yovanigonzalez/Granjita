@@ -12,19 +12,39 @@
 
     .contenedor4 {
       display: flex;
+      flex-wrap: wrap;
       width: 80%;
-      padding: 40px;
+      padding: 20px;
+      margin: auto;
+      border-radius: 10px;
     }
 
     .video {
       flex: 1;
       border-radius: 10px;
+      overflow: hidden;
     }
 
-    .texto {
-      flex: 1;
-      padding: 20px;
-      box-sizing: border-box;
+    .video video {
+      width: 30%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+
+    @media (max-width: 768px) {
+      .contenedor4 {
+        padding: 10px;
+      }
+
+      .video {
+        flex: 1 100%;
+      }
+
+      .video video {
+        width: 100%; /* Make the video take up the full width on smaller screens */
+        height: auto; /* Maintain the video's aspect ratio */
+      }
     }
   </style>
 </head>
@@ -32,11 +52,16 @@
 
   <div class="contenedor4">
     <div class="video">
-      <iframe width="100%" height="315" src="views/video1.mp4" frameborder="0" allowfullscreen></iframe>
+      <video controls>
+        <source src="views/video1.mp4" type="video/mp4">
+        Video 1
+      </video>
     </div>
     <div class="texto">
-      <h2>La Granjita</h2>
-      <p>Este es un ejemplo de un texto a la derecha del video. Puedes personalizar el contenido aquí.</p>
+      <h2>LA GRANJITA</h2>
+      <p align="justify">Ya sea que estés buscando pechugas sin hueso, muslos jugosos o alas crujientes, en La Granjita encontrarás una amplia variedad de cortes de pollo fresco que se adaptan a todos los gustos y preferencias culinarias. También ofrecemos opciones de pollo orgánico y sin hormonas para aquellos que buscan una opción aún más saludable.</p>
+    <br>
+    <p align="justify">En La Granjita, nos esforzamos por brindar un servicio personalizado a cada cliente. Nuestro personal experto está listo para ayudarte a elegir los cortes perfectos de pollo para tu próxima comida. Además, ofrecemos consejos de cocina y recetas deliciosas para que saques el máximo provecho de nuestros productos.</p>
     </div>
   </div>
 

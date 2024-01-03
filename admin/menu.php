@@ -82,14 +82,6 @@ if (isset($_SESSION['nombre_usuario'])) {
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
 
-        <li class="nav-item">
-          <a href="inicio.php" class="nav-link">
-            <i class="nav-icon fas fa-home"></i>
-            <p>Inicio</p>
-          </a>
-        </li>
-
-
         
         <!-- Elemento de menú Productos con submenús Extra -->
         <li class="nav-item has-treeview">
@@ -118,31 +110,71 @@ if (isset($_SESSION['nombre_usuario'])) {
         </li>
         
 
-                <!-- Elemento de menú Productos con submenús Extra -->
-                <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-images"></i>
-            <p>Tienda <i class="fas fa-angle-left right"></i></p>
-          </a>
+<!-- Sección Tienda -->
+<li class="nav-item has-treeview">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-shopping-cart"></i> <!-- Cambié el icono aquí -->
+        <p>Tienda <i class="fas fa-angle-left right"></i></p>
+    </a>
 
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="banner.php" class="nav-link">
-                <i class="fas fa-plus nav-icon"></i>
+    <!-- Submenús de Tienda -->
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="banner.php" class="nav-link">
+                <i class="fas fa-exchange-alt nav-icon"></i> <!-- Cambié el icono aquí -->
                 <p>Cambio de Tienda</p>
-              </a>
-            </li>
-          </ul>
-
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="crud_banner.php" class="nav-link">
-                <i class="fas fa-plus nav-icon"></i>
-                <p>Crud Tienda</p>
-              </a>
-            </li>
-          </ul>
+            </a>
         </li>
+    </ul>
+
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="crud_banner.php" class="nav-link">
+                <i class="fas fa-database nav-icon"></i> <!-- Cambié el icono aquí -->
+                <p>Crud Tienda</p>
+            </a>
+        </li>
+    </ul>
+</li>
+
+<!-- Sección Misión -->
+<li class="nav-item has-treeview">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-clipboard"></i> <!-- Cambié el icono aquí -->
+        <p>Misión <i class="fas fa-angle-left right"></i></p>
+    </a>
+
+    <!-- Submenús de Misión -->
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="mision.php" class="nav-link">
+                <i class="fas fa-exchange-alt nav-icon"></i> <!-- Cambié el icono aquí -->
+                <p>Cambio de Misión</p>
+            </a>
+        </li>
+    </ul>
+
+</li>
+
+<!-- Sección Visión -->
+<li class="nav-item has-treeview">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-eye"></i> <!-- Cambié el icono aquí -->
+        <p>Visión <i class="fas fa-angle-left right"></i></p>
+    </a>
+
+    <!-- Submenús de Visión -->
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="vision.php" class="nav-link">
+                <i class="fas fa-exchange-alt nav-icon"></i> <!-- Cambié el icono aquí -->
+                <p>Cambio de Visión</p>
+            </a>
+        </li>
+    </ul>
+
+</li>
+
 
         
         <li class="nav-item">

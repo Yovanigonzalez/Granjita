@@ -11,7 +11,7 @@ $rol = 'admin'; // Suponiendo que obtienes el rol del usuario desde la base de d
 
 // Verificar el rol del usuario y redirigir según sea necesario
 if ($rol === 'admin') {
-    header("Location: admin/inicio.php");
+    header("Location: admin/banner.php");
     exit();
 } else {
     // Redirigir a una página diferente para usuarios no administradores si es necesario

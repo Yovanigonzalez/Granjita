@@ -15,22 +15,57 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white; /* Añade este estilo para asegurarte de que el texto sea visible en el fondo */
+            color: white;
         }
 
         .white-box {
             background-color: white;
-            padding: 20px; /* Puedes ajustar el valor de padding según tus necesidades */
-            border-radius: 10px; /* Añade esquinas redondeadas al cuadro */
+            padding: 20px;
+            border-radius: 10px;
             margin:20px;
             height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
+        .chicken-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px;
+            width: 200px; /* Puedes ajustar el ancho según tus necesidades */
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    
     <div class="white-box">
-        <!-- Contenido de tu página aquí -->
+        <div class="chicken-item">
+            <h3>Pollo Asado</h3>
+            <p>Delicioso pollo asado con especias especiales.</p>
+        </div>
+
+        <div class="chicken-item">
+            <h3>Nuggets de Pollo</h3>
+            <p>Crujientes y deliciosos nuggets de pollo.</p>
+        </div>
+
+        <div class="chicken-item">
+            <h3>Pollo a la Parrilla</h3>
+            <p>Exquisito pollo a la parrilla con aderezo especial.</p>
+        </div>
+
+        <div class="chicken-item">
+            <h3>Alitas de Pollo</h3>
+            <p>Alitas de pollo picantes y deliciosas.</p>
+        </div>
+
+        <div class="chicken-item">
+            <h3>Pollo Frito</h3>
+            <p>Pollo crujiente y dorado, perfecto para disfrutar.</p>
+        </div>
     </div>
 </body>
 </html>

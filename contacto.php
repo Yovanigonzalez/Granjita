@@ -74,38 +74,38 @@
 
         /* Seccion 3 */
 
-/* Estilos para la nueva sección dividida en dos columnas */
-.new-section-two-columns {
-    display: flex;
-    flex-direction: column; /* Cambia la dirección del diseño a columna en pantallas pequeñas */
-    margin-top: -41px;
-}
-
-/* Estilos para las columnas dentro de la nueva sección */
-.new-section-two-columns .column {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin-bottom: 20px; /* Espacio inferior entre las columnas */
-}
-
-/* Estilos para la imagen con identificador 'imagen-contacto' */
-#imagen-contacto {
-    width: 35%; /* Ajusta el ancho de la imagen según el ancho de su contenedor */
-    height: auto;
-    /*display: block;*/
-    border-radius: 10px; /* Añade bordes redondeados si lo deseas */
-}
-
-/* Estilos responsivos para pantallas más pequeñas */
-@media (min-width: 768px) {
+    /* Estilos para la nueva sección dividida en dos columnas */
     .new-section-two-columns {
-        flex-direction: row; /* Vuelve a la dirección de fila en pantallas más grandes */
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del diseño a columna en pantallas pequeñas */
+        margin-top: -41px;
     }
 
+    /* Estilos para las columnas dentro de la nueva sección */
     .new-section-two-columns .column {
-        width: 48%; /* Ajusta el ancho de las columnas según tus necesidades */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 20px; /* Espacio inferior entre las columnas */
     }
 
-}
+    /* Estilos para la imagen con identificador 'imagen-contacto' */
+    #imagen-contacto {
+        width: 35%; /* Ajusta el ancho de la imagen según el ancho de su contenedor */
+        height: auto;
+        /*display: block;*/
+        border-radius: 10px; /* Añade bordes redondeados si lo deseas */
+    }
+
+    /* Estilos responsivos para pantallas más pequeñas */
+    @media (min-width: 768px) {
+        .new-section-two-columns {
+            flex-direction: row; /* Vuelve a la dirección de fila en pantallas más grandes */
+        }
+
+        .new-section-two-columns .column {
+            width: 48%; /* Ajusta el ancho de las columnas según tus necesidades */
+        }
+
+    }
 
 
     </style>
