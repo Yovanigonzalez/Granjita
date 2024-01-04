@@ -1,4 +1,17 @@
-<?php include 'nav/menu.php'; ?>
+<?php
+// Establecer la conexión a la base de datos (reemplaza estos valores con tus propias credenciales)
+include 'config/config.php';
+include 'nav/menu.php';
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Realizar la consulta a la base de datos
+$sql = "SELECT id, titulo, subtitulo, imagen FROM tienda";
+$result = $conn->query($sql);
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +28,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: #000;
         }
 
         .white-box {
@@ -36,36 +49,34 @@
             margin: 10px;
             width: 200px; /* Puedes ajustar el ancho según tus necesidades */
             text-align: center;
+            height: 300px;
+        }
+
+        .chicken-item img {
+            width: 100%; /* Establecer el ancho al 100% del contenedor */
+            height: auto; /* Mantener la proporción original de la imagen */
         }
     </style>
 </head>
 <body>
     
     <div class="white-box">
-        <div class="chicken-item">
-            <h3>Pollo Asado</h3>
-            <p>Delicioso pollo asado con especias especiales.</p>
-        </div>
-
-        <div class="chicken-item">
-            <h3>Nuggets de Pollo</h3>
-            <p>Crujientes y deliciosos nuggets de pollo.</p>
-        </div>
-
-        <div class="chicken-item">
-            <h3>Pollo a la Parrilla</h3>
-            <p>Exquisito pollo a la parrilla con aderezo especial.</p>
-        </div>
-
-        <div class="chicken-item">
-            <h3>Alitas de Pollo</h3>
-            <p>Alitas de pollo picantes y deliciosas.</p>
-        </div>
-
-        <div class="chicken-item">
-            <h3>Pollo Frito</h3>
-            <p>Pollo crujiente y dorado, perfecto para disfrutar.</p>
-        </div>
+        <?php
+        // Iterar sobre los resultados de la consulta y mostrar los datos
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="chicken-item">';
+            echo '<h3>' . $row['titulo'] . '</h3>';
+            echo '<p>' . $row['subtitulo'] . '</p>';
+            // Ruta de la imagen: ajustar según la estructura de tus carpetas
+            echo '<img src="tienda/' . $row['imagen'] . '" alt="Imagen del producto">';
+            echo '</div>';
+        }
+        ?>
     </div>
 </body>
 </html>
+
+<?php
+// Cerrar la conexión
+$conn->close();
+?>

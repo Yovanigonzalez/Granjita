@@ -8,42 +8,34 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Verificar si se envió el formulario
+// Procesar el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recuperar los valores del formulario
     $titulo = $_POST["titulo"];
     $subtitulo = $_POST["subtitulo"];
 
-    // Procesar la imagen
-    $carpeta_destino = '../banner/';
-    $nombre_archivo = $_FILES["imagen"]["name"];
-    $ruta_imagen = $carpeta_destino . $nombre_archivo;
+    // Procesar la imagen (guardar en una carpeta y obtener la ruta)
+    $imagenNombre = $_FILES["imagen"]["name"];
+    $imagenTmpName = $_FILES["imagen"]["tmp_name"];
+    $carpetaDestino = "../tienda/";
+    $imagenRuta = $carpetaDestino . $imagenNombre;
+    move_uploaded_file($imagenTmpName, $imagenRuta);
 
-    if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $ruta_imagen)) {
-        // Consulta SQL para insertar datos en la base de datos
-        $sql = "INSERT INTO banners (titulo, subtitulo, imagen) VALUES ('$titulo', '$subtitulo', '$ruta_imagen')";
+    // Insertar en la base de datos
+    $sql = "INSERT INTO tienda (titulo, subtitulo, imagen) VALUES ('$titulo', '$subtitulo', '$imagenRuta')";
 
-        // Ejecutar la consulta
-        if ($conn->query($sql) === TRUE) {
-            $mensaje_exito = 'Banner agregado con éxito';
-        } else {
-            $mensaje_error = "Error: " . $sql . "<br>" . $conn->error;
-        }
+    if ($conn->query($sql) === TRUE) {
+        echo '<div class="mensaje-exito">Registro agregado exitosamente</div>';
     } else {
-        $mensaje_error = "Error al subir la imagen";
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
-
-// Cerrar la conexión a la base de datos
-$conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Banner</title>
+    <title>Tienda</title>
 
     <!-- Logo -->
     <link rel="shortcut icon" type="image/x-icon" href="../logo/ico.png">
@@ -66,14 +58,6 @@ $conn->close();
             padding: 20px;
             border-radius: 5px;
         }
-        .mensaje-exito {
-            background-color: #dff0d8;
-            color: #3c763d;
-            border: 1px solid #d6e9c6;
-            border-radius: 4px;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
     </style>
 
 </head>
@@ -86,9 +70,9 @@ $conn->close();
                     <div class="col-md-8">
                         <div class="box box-primary formulario-box">
                             <div class="box-body">
-                                <h1 align="center">Agregar banner</h1>
                                 <form method="post" enctype="multipart/form-data">
-                                                                        <div class="form-group">
+                                    <h1 align="center">Agregar a Tienda</h1>
+                                    <div class="form-group">
                                         <label for="titulo">Título:</label>
                                         <input type="text" class="form-control" id="titulo" name="titulo" required>
                                     </div>
@@ -112,3 +96,6 @@ $conn->close();
     </div>
 </body>
 </html>
+<?php
+$conn->close();
+?>

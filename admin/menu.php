@@ -120,7 +120,7 @@ if (isset($_SESSION['nombre_usuario'])) {
     <!-- Submenús de Tienda -->
     <ul class="nav nav-treeview">
         <li class="nav-item">
-            <a href="banner.php" class="nav-link">
+            <a href="tienda.php" class="nav-link">
                 <i class="fas fa-exchange-alt nav-icon"></i> <!-- Cambié el icono aquí -->
                 <p>Cambio de Tienda</p>
             </a>
@@ -129,7 +129,7 @@ if (isset($_SESSION['nombre_usuario'])) {
 
     <ul class="nav nav-treeview">
         <li class="nav-item">
-            <a href="crud_banner.php" class="nav-link">
+            <a href="crud_tienda.php" class="nav-link">
                 <i class="fas fa-database nav-icon"></i> <!-- Cambié el icono aquí -->
                 <p>Crud Tienda</p>
             </a>

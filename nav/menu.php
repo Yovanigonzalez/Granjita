@@ -18,6 +18,7 @@
       <a href="contacto.php">Contacto</a>
       <a href="acerca.php">Acerca de</a>
       <a href="tienda.php">Tienda</a>
+      <a href="">Blog</a>
       <a href="login.php">Login</a>
     </nav>
 

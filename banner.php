@@ -31,6 +31,11 @@
     max-width: 80%;
   }
 
+  .banner-item img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción del aspecto original de la imagen */
+  }
+
   @media (min-width: 768px) {
     /* Additional styles for larger screens if needed */
     .banner {
@@ -43,6 +48,7 @@
     }
   }
 </style>
+
 
 
 </head>
@@ -64,62 +70,55 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L75 9.28571C150 18.5714 300 37.1429 450 37.1429C600 37.1429 750 18.5714 825 9.28571L900 0V130H825C750 130 600 130 450 130C300 130 150 130 75 130H0V0Z" fill="#F89A0C"/>
     </svg>
 
-    <!-- Nuevo banner con imagen y texto -->
-    <div class="banner" id="banner">
-      <div class="banner-text">
-        <h2>¡Bienvenido a La Granjita!</h2>
-        <p>Descubre nuestros productos avícolas frescos y de alta calidad. Estamos comprometidos en ofrecerte opciones saludables y deliciosas.</p>
+<!-- Nuevo banner con imagen y texto -->
+<div class="banner" id="banner">
+  <?php
+  include 'config/config.php';
+
+  // Verificar la conexión
+  if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+  }
+
+  // Consulta SQL para obtener datos de la tabla 'banner'
+  $sql = "SELECT id, titulo, subtitulo, imagen FROM banners";
+  $result = $conn->query($sql);
+
+  // Verificar si se obtuvieron resultados
+  if ($result->num_rows > 0) {
+    // Mientras haya filas en el resultado, mostrar los banners
+    while ($row = $result->fetch_assoc()) {
+      // Aquí puedes usar los datos obtenidos de la base de datos
+      $id = $row['id'];
+      $titulo = $row['titulo'];
+      $subtitulo = $row['subtitulo'];
+      $imagen = "banner/" . $row['imagen'];  // Ajusta la ruta de la imagen
+      ?>
+
+      <!-- Elemento del Banner -->
+      <div class='banner-item'>
+        <div class='banner-text'>
+          <h2><?php echo $titulo; ?></h2>
+          <p><?php echo $subtitulo; ?></p>
+        </div>
+        <img src='<?php echo $imagen; ?>' alt='Imagen de La Granjita'>
       </div>
-      <img src="years/teh.png" alt="Imagen de La Granjita">
-    </div>
+
+      <?php
+    }
+  } else {
+    echo "No hay banners disponibles en la base de datos.";
+  }
+
+  // Cerrar la conexión a la base de datos
+  $conn->close();
+  ?>
+</div>
 
   </div>
 
-  <script>
-    // Contenido del banner
-    const banners = [
-      {
-        title: "¡Bienvenido a La Granjita!",
-        description: "Descubre nuestros productos avícolas frescos y de alta calidad. Estamos comprometidos en ofrecerte opciones saludables y deliciosas.",
-        imagePath: "years/teh.png"
-      },
-      {
-        title: "Descubre nuestras promociones",
-        description: "Aprovecha nuestras ofertas especiales en productos avícolas. Calidad y buen precio en cada compra.",
-        buttonText: "Ver promociones",
-        imagePath: "years/atencion.png"
-      },
-      {
-        title: "Recetas deliciosas con pollo",
-        description: "Explora nuestras recetas exclusivas con pollo. Prepara platillos increíbles con los productos de La Granjita.",
-        imagePath: "years/1993.png"
-      }
-      // Agrega más banners según sea necesario
-    ];
-
-    // Función para cambiar el banner cada 3 segundos
-    let currentBannerIndex = 0;
-    function changeBanner() {
-      const banner = document.getElementById('banner');
-      const currentBanner = banners[currentBannerIndex];
-      banner.innerHTML = `
-        <div class="banner-text">
-          <h2>${currentBanner.title}</h2>
-          <p>${currentBanner.description}</p>
-        </div>
-        <img src="${currentBanner.imagePath}" alt="Imagen de La Granjita">
-      `;
-      currentBannerIndex = (currentBannerIndex + 1) % banners.length;
-    }
-
-    // Cambia el banner cada 3 segundos
-    setInterval(changeBanner, 3000);
-  </script>
-
 </body>
 </html>
-
-
 
 
 
