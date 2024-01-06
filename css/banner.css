@@ -98,6 +98,28 @@ width: 50%; /* Ajusta el ancho de la imagen según sea necesario */
       flex-direction: column;
     }
 
+    .banner {
+      position: relative;
+      width: 100%;
+      background-color: #F89A0C;
+      color: #FFF;
+      text-align: center;
+      margin-top: -4px;
+      height: 443px;
+  
+    }
+  
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      width: 85%;
+      height: 285px;
+      padding: 20px;
+      flex-direction:column;
+    }
+
+    
     .imagen,
     .texto {
       max-width: 100%;
@@ -106,56 +128,9 @@ width: 50%; /* Ajusta el ancho de la imagen según sea necesario */
     }
 
     svg {
-  margin-top: -3px; /* Updated margin-top for smaller screens */
+  margin-top: 3px; /* Updated margin-top for smaller screens */
 }
   }
 
 
-  .banner {
-    position: relative;
-    width: 100%;
-    background-color: #F89A0C;
-    color: #FFF;
-    text-align: center;
-    margin-top: -4px;
 
-  }
-
-  .banner-carrusel {
-    overflow: hidden;
-  }
-
-  .banner-item {
-    text-align: center;
-  }
-
-  .banner-item img {
-    width: 100%;
-    height: auto;
-  }
-
-  .texto-banner {
-    padding: 20px;
-  }
-
-  .texto-banner h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .texto-banner p {
-    font-size: 16px;
-  }
-
-  .svg-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .svg-circle {
-    width: 29px;
-    height: 29px;
-    fill: #FBFBFB;
-  }
