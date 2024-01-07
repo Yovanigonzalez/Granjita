@@ -38,7 +38,6 @@
     <p>Queremos facilitar tu experiencia de compra, por lo que si tienes alguna preferencia o necesitas asistencia con un método de pago específico, no dudes en contactarnos.</p>
 
     <img src="store/pagos.png" alt="Tarjetas de crédito">
-    <!-- Añade más imágenes según sea necesario -->
 
   </div>
 

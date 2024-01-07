@@ -151,8 +151,8 @@
         <p>Puedes comunicarte con nosotros de varias formas. Estamos aquí para atenderte. No dudes en contactarnos para cualquier consulta, pedido o información adicional.</p>
         <p><strong>Información de Contacto:</strong></p>
         <p>Dirección: Calle 5 Ote 549, Centro de la Ciudad, 75700 Tehuacán, Puebla.</p>
-        <p>Teléfono: <a href="tel:+52383838793" style="color: #000;">2383838793</a></p>
-        <p>WhatsApp: <a href="https://wa.me/52384088922?text=Hola%20La%20Granjita,%20quiero%20obtener%20información" style="color: #000;"><i class="bi bi-whatsapp"></i> 2384088922</a></p>        <!--<p>Correo Electrónico: info@lagranjita.com.mx</p>-->        <!--<p>Correo Electrónico: info@lagranjita.com.mx</p>-->        <!--<p>Correo Electrónico: info@lagranjita.com.mx</p>-->
+        <p>Teléfono: <a href="tel: 2383838793" style="color: #000;">2383838793</a></p>
+        <p>WhatsApp: <a href="https://wa.me/2384088922?text=Hola%20La%20Granjita,%20quiero%20obtener%20información" style="color: #000;"><i class="bi bi-whatsapp"></i> 2384088922</a></p>        <!--<p>Correo Electrónico: info@lagranjita.com.mx</p>-->        <!--<p>Correo Electrónico: info@lagranjita.com.mx</p>-->        <!--<p>Correo Electrónico: info@lagranjita.com.mx</p>-->
         <p>¡La Granjita, donde la frescura y la calidad se encuentran en cada consulta y cada pedido!</p>
     </div>
     <!-- Columna derecha con imagen -->

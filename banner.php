@@ -81,7 +81,12 @@
       <h1>ABASTECEDORA<br> LA 'GRANJITA' </h1>
       <br>
       <h4>La Granjita es una abastecedora de pollo comprometida con brindar productos avícolas frescos y de primera calidad. Ubicados en el corazón de Tehuacán, Puebla, nos esforzamos por ofrecer a nuestros clientes opciones saludables y deliciosas de pollo y productos avícolas.</h4>
-      <button>Conocer más</button>
+      <button class="button" onclick="irAConocer()">Conocer más</button>
+      <script>
+    function irAConocer() {
+        window.location.href = 'acerca.php';
+    }
+</script>
     </div>
   </div>
 
