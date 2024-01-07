@@ -18,8 +18,7 @@
       <a href="contacto.php">Contacto</a>
       <a href="acerca.php">Acerca de</a>
       <a href="tienda.php">Productos</a>
-      <a href="">Blog</a>
-      <a href="">Bolsa de trabajo</a>
+      <a href="job.php">Bolsa de trabajo</a>
       <a href="login.php">Login</a>
     </nav>
 
