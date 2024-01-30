@@ -14,17 +14,16 @@
   <style>
     /* Estilos actualizados para el banner */
     .banner {
-      display: flex;
       align-items: center;
       justify-content: center;
       background-color: #F89A0C;
-      position: relative;
-      flex-direction: column;
-      text-align: center;
       color: #FFF;
-      height: 300px; /* Establecer una altura fija para el contenedor del banner */
-      margin-top: -136px;
+      margin-top: -100px;
     }
+
+    svg {
+margin-top: -90px; /* Updated margin-top for smaller screens */
+}
 
     /* Estilos actualizados para el banner */
     .banner img {
@@ -68,6 +67,53 @@
       margin-bottom: 0;
     }
 
+    @media (max-width: 600px) {
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    background-color: #F89A0C;
+    color: #FFF;
+    text-align: center;
+    margin-top: -20px;
+    height: 443px;
+
+  }
+
+  .banner img {
+    max-width: 85%; /* Ajusta el ancho de la imagen según tus necesidades */
+    max-height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    object-fit: contain;
+  }
+
+  .banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 85%;
+    height: 400px;
+    padding: 20px;
+    flex-direction:column;
+  }
+
+  
+  .imagen,
+  .texto {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  svg {
+margin-top: 3px; /* Updated margin-top for smaller screens */
+}
+}
 
   </style>
 

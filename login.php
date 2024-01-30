@@ -51,8 +51,9 @@ body {
 .login-form input {
     padding: 10px;
     margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    background: #cccccc73;
 }
 
 .login-form button {
@@ -60,7 +61,7 @@ body {
     background-color: #F89A0C;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
 }
 

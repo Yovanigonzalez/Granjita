@@ -31,7 +31,7 @@
             width: 100%;
             height: auto;
             margin: 0;
-            margin-top: -143px;
+            margin-top: -140px;
         }
 
         /* Estilos para la sección con fondo de color */
@@ -39,7 +39,7 @@
             background-color: #F89A0C;
             padding: 20px; /* Puedes ajustar el relleno según tus necesidades */
             color: #ffffff; /* Color de texto dentro de la sección */
-            margin-top: -5px;
+            margin-top: -100px;
         }
 
         /* Estilos para las columnas */
@@ -109,6 +109,18 @@
 
     }
 
+    
+/* Media query para pantallas más pequeñas (ej. dispositivos móviles) */
+@media (max-width: 767px) {
+    .container {
+        /* Estilos específicos para pantallas más pequeñas */
+        justify-content: flex-start; /* Cambia la alineación horizontal a inicio para evitar centrado */
+        align-items: flex-start; /* Cambia la alineación vertical a inicio para evitar centrado */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin-top: -45px;
+    }
+}
+
 
     </style>
 </head>
@@ -118,9 +130,11 @@
     <img class="main-image" src="ci/tehuacan.jpg" alt="Descripción de la imagen">
 
     <!-- SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="111" viewBox="0 0 900 111" fill="none">
+    <div id="primer-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" id="primer-svg" width="900" height="139" viewBox="0 0 900 139" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L37.5 11.5625C75 23.125 150 46.25 225 60.125C300 74 375 78.625 450 76.3125C525 74 600 64.75 675 55.5C750 46.25 825 37 862.5 32.375L900 27.75V111H862.5C825 111 750 111 675 111C600 111 525 111 450 111C375 111 300 111 225 111C150 111 75 111 37.5 111H0V0Z" fill="#F89A0C"/>
     </svg>
+    </div>
 
     <!-- Sección con fondo de color y columnas -->
     <div class="color-section container">
