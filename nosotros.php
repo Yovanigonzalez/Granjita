@@ -31,6 +31,7 @@
 @media only screen and (min-width: 600px) {
     .custom-container {
         flex-direction: row; /* Vuelve a la dirección de fila en pantallas más grandes */
+        
     }
 
     .custom-text,
@@ -84,6 +85,8 @@
         </div>
     </div>
 
+
+    
     <div class="custom-container">
         <div class="custom-text">
             <h2 align="center">Nuestro equipo de trabajo</h2>

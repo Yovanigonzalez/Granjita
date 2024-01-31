@@ -35,6 +35,7 @@
     @media (max-width: 768px) {
       .contenedor4 {
         padding: 10px;
+        flex-direction: column-reverse;
       }
 
       .video {

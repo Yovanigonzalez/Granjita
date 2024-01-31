@@ -78,13 +78,13 @@ margin-top: -90px; /* Updated margin-top for smaller screens */
     background-color: #F89A0C;
     color: #FFF;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -37px;
     height: 443px;
 
   }
 
   .banner img {
-    max-width: 85%; /* Ajusta el ancho de la imagen según tus necesidades */
+    max-width: 75%; /* Ajusta el ancho de la imagen según tus necesidades */
     max-height: 100%;
     border-radius: 50%;
     background-color: #fff;

@@ -43,7 +43,7 @@
                 @media (max-width: 600px) {
             .contenedor-interno {
                 margin-top: 0; /* Elimina el margen superior en dispositivos pequeños */
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
 
             .izquierda img {

@@ -116,8 +116,7 @@
         /* Estilos específicos para pantallas más pequeñas */
         justify-content: flex-start; /* Cambia la alineación horizontal a inicio para evitar centrado */
         align-items: flex-start; /* Cambia la alineación vertical a inicio para evitar centrado */
-        text-align: left; /* Alinea el texto a la izquierda */
-        margin-top: -45px;
+        margin-top: -18px;
     }
 }
 
