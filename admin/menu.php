@@ -82,7 +82,31 @@ if (isset($_SESSION['nombre_usuario'])) {
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
 
-        
+      <?php
+
+?>
+
+<li class="nav-item">
+    <a href="solicitud.php" class="nav-link">
+        <i class="nav-icon fas fa-door-closed"></i>
+        <p>Solicitud de empleo</p>
+        <?php
+            // Ahora puedes utilizar $conn en este punto para realizar consultas
+            $query = "SELECT COUNT(*) AS total FROM solicitudes_empleo";
+            $result = $conn->query($query);
+
+            if ($result) {
+                $row = $result->fetch_assoc();
+                $totalRecords = $row['total'];
+                echo '<span class="badge badge-danger" id="notification-badge">' . $totalRecords . '</span>';
+            } else {
+                echo "Error: " . $conn->error;
+            }
+        ?>
+    </a>
+</li>
+
+
         <!-- Elemento de menú Productos con submenús Extra -->
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
@@ -94,7 +118,7 @@ if (isset($_SESSION['nombre_usuario'])) {
             <li class="nav-item">
               <a href="banner.php" class="nav-link">
                 <i class="fas fa-plus nav-icon"></i>
-                <p>Cambio de banner</p>
+                <p>Agregar banner</p>
               </a>
             </li>
           </ul>
@@ -103,19 +127,40 @@ if (isset($_SESSION['nombre_usuario'])) {
             <li class="nav-item">
               <a href="crud_banner.php" class="nav-link">
                 <i class="fas fa-plus nav-icon"></i>
-                <p>Crud Banner</p>
+                <p>Eliminar Banner</p>
               </a>
             </li>
           </ul>
         </li>
         
 
-<!-- Sección Tienda -->
+<!-- Elemento de menú Productos con submenús Extra -->
 <li class="nav-item has-treeview">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-shopping-cart"></i> <!-- Cambié el icono aquí -->
-        <p>Tienda <i class="fas fa-angle-left right"></i></p>
-    </a>
+  <a href="#" class="nav-link">
+    <i class="nav-icon fas fa-briefcase"></i>
+    <p>Bolsa de trabajo <i class="fas fa-angle-left right"></i></p>
+  </a>
+
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="trabajo.php" class="nav-link">
+        <i class="fas fa-plus nav-icon"></i>
+        <p>Agregar Bolsa de trabajo</p>
+      </a>
+    </li>
+  </ul>
+  
+
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="e_trabajo.php" class="nav-link">
+        <i class="fas fa-plus nav-icon"></i>
+        <p>Eliminar Bolsa de trabajo</p>
+      </a>
+    </li>
+  </ul>
+</li>
+
 
     <!-- Submenús de Tienda -->
     <ul class="nav nav-treeview">

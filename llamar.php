@@ -30,6 +30,7 @@
         .derecha {
             flex: 2;
             padding: 20px;
+            margin-top: 120px;
         }
 
         /* Asegúrate de ajustar el ancho y la altura de la imagen según tus necesidades */
